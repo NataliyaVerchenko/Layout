@@ -1,0 +1,115 @@
+/******Fonts for site*********/
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('../fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-BoldItalic';
+    src: url('../fonts/Open_Sans/OpenSans-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-ExtraBold';
+    src: url('../fonts/Open_Sans/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-ExtraBoldItalic';
+    src: url('../fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-stretch: expanded;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-Italic';
+    src: url('../fonts/Open_Sans/OpenSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-LightItalic';
+    src: url('../fonts/Open_Sans/OpenSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-Semibold';
+    src: url('../fonts/Open_Sans/OpenSans-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiboldItalic';
+    src: url('../fonts/Open_Sans/OpenSans-SemiboldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/******Reset CSS*********/
+
+
+/*******Global  CSS**********/
+main{
+    color: #616161;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    }
+/******HEADER*********/
+
+
+/******MAIN*********/
+
+
+
+/******FOOTER*********/
+
+
+
+/******MEDIA QUERIES*********/
+
+@media screen and (max-width:480px){
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+}
+@media screen and (max-width:767px){
+    /* default iPad screens */
+}
+/* different techniques for iPad screening */
+@media screen and  (max-width: 1024px){
+    /* For portrait layouts only */
+}
