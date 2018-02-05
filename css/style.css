@@ -131,14 +131,6 @@ main {
     height: 0;
 }
 
-.cliarfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-}
 
 .container {
     max-width: 1174px;
@@ -180,6 +172,15 @@ section .subtitle {
 /******MAIN*********/
 
 /******HEADER*********/
+.header-fixed{
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    background: #fff;
+}
+
+
 /*Carousel*/
 
 .slick-carousel {
@@ -248,7 +249,7 @@ a.btn-cta {
 
 /*nav*/
 header {
-    position: relative;
+  /*  position: relative;*/
     padding: 35px 0;
 }
 
