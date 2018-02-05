@@ -1,7 +1,7 @@
 /******Fonts for site*********/
 
 @font-face {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat-bold';
     src: url('../fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
@@ -81,35 +81,520 @@
 }
 
 /******Reset CSS*********/
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 
+body {
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*:after, :before {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+}
 
 /*******Global  CSS**********/
-main{
+main {
     color: #616161;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    }
-/******HEADER*********/
+}
 
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.cliarfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.container {
+    max-width: 1174px;
+    margin: 0 auto;
+}
+
+section {
+    padding-top: 65px;
+    padding-bottom: 100px;
+}
+
+section.button {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+section .title {
+    color: #212121;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+section .subtitle {
+    text-align: center;
+    margin-top: 30px;
+    color: #bdbdbd;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
 
 /******MAIN*********/
 
+/******HEADER*********/
+/*Carousel*/
 
+.slick-carousel {
+    position: relative;
+    height: 497px;
+    overflow: hidden;
+}
+
+.carusel-item__content {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    background: rgba(66, 66, 66, 0.5);
+    text-align: center;
+}
+
+.carusel-item__img {
+    width: 100%;
+}
+
+.carusel-item__content {
+    padding-top: 155px;
+}
+
+.slick-carousel h2.title {
+    color: #ffffff;
+    font-family: Montserrat, sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+
+p.header-subtitle {
+    font-family: inherit;
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 28px;
+    width: 55%;
+    margin: 0 auto;
+}
+
+a.btn-cta {
+    margin-top: 40px;
+    padding: 9px 47px;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid #ff6e40;
+    border-radius: 1px;
+    background: transparent;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-cta:hover {
+    background: #ff6e40;
+}
+
+/*nav*/
+header {
+    position: relative;
+    padding: 35px 0;
+}
+
+.wrapper-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    padding-top: 9px;
+}
+
+a.logo {
+    display: flex;
+    justify-content: flex-start;
+    color: #212121;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #616161;
+}
+
+.menu li:last-child {
+    padding-right: 0;
+}
+
+/*SECTION ABOUT*/
+.about {
+    text-align: center;
+    /*line-height: 27px;*/
+    font-size: 16px;
+    letter-spacing: 1px;
+
+}
+
+section .description {
+    word-break: normal;
+    color: #616161;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+a.btn-read {
+    margin-top: 1px;
+    background: transparent;
+    border: 2px solid #000000;
+    color: #212121;
+    padding: 9px 42px;
+
+}
+
+a.btn-read:hover {
+    background: #1b1e21;
+    color: white;
+}
+
+/*SECTION SERVICES*/
+.services {
+    background: #f5f5f5;
+}
+
+.services h3 {
+    text-align: left;
+    color: #212121;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.services .description {
+    word-break: break-all;
+    margin-top: -20px;
+}
+
+.block-icon {
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: url("../images/icon1.png") no-repeat center;
+    margin-left: 9px;
+    margin-right: 9px;
+}
+
+.item-servise {
+    align-items: center;
+    height: 100px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.block-text-wrapper {
+    margin-top: 90px;
+    padding-left: 5px;
+}
+
+.block-text-wrapper > .subtitle {
+    margin-top: 0;
+    font-size: 19px;
+    margin-bottom: 19px;
+}
+
+/*SECTION CALL-ACTIONS*/
+.call-actions {
+    background: #424242;
+    padding: 35px 0;
+}
+
+.call-actions span {
+    color: #ffffff;
+    font-family: Montserrat, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.call-actions p {
+    color: #bdbdbd;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+a.btn-subscribe {
+    margin-top: 0;
+    background: #ff6e40;
+}
+
+/*SECTION WORKS*/
+.portfolio-item {
+    width: 380px;
+    height: 380px;
+    margin-bottom: 20px;
+}
+
+.item6 {
+    background: url("../images/block-memo05-akihiro-yoshida.png") no-repeat center;
+
+}
+
+.item2 {
+    background: url("../images/dandelion01-akihiro-yoshida-copy.png") no-repeat center;
+
+}
+
+.item4 {
+    background: url("../images/flame03-akihiro-yoshida.png") no-repeat center;
+
+}
+
+.item3 {
+    background: url("../images/chair-by-masamune-kaji-on-behance.png") no-repeat center;
+
+}
+
+.item5 {
+    background: url("../images/slice.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.item1 {
+    background: url("../images/slice-2 .jpg") no-repeat center;
+    background-size: cover;
+
+}
+
+/*SECTION CONTACT*/
+.contact {
+    background: #f5f5f5;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+.contact .subtitle {
+    margin: 0;
+}
+
+.contact .title {
+    margin: 0;
+}
+
+.contact .block-icon {
+    background: #ff6e40;
+    border-radius: 50%;
+}
+
+.contact .block-icon a {
+    display: block;
+    margin: 20px;
+    height: auto;
+    color: white;
+
+}
+
+.contact .block-icon a span {
+    font-size: 30px;
+    display: inline-block;
+}
+
+.contact .block-text {
+    margin-left: 10px;
+}
+
+/**********MAP*******/
+#map {
+    width: 100%;
+    height: 400px;
+}
 
 /******FOOTER*********/
+.footer {
+    background: #f5f5f5;
+}
 
+.footer .row {
+    padding: 12px 0;
+}
 
+.footer ul {
+    list-style: none;
+}
+
+.social li {
+    margin: 0 5px;
+}
+
+.social li a, .policy li a {
+    padding: 5px 8px;
+    text-decoration: none;
+    color: #616161;
+}
+
+.social li a:hover {
+    color: #ff6e40;
+}
+
+.policy li {
+    border-right: 1px solid #616161;
+}
+
+.policy li:last-child {
+    border: none;
+}
+
+/*.scrollup*/
+.scrollup {
+    font-family: "Montserrat-bold", sans-serif;
+    position: fixed;
+    z-index: 99999;
+    right: 20px;
+    bottom: 2%;
+    padding: 5px;
+    font-size: 23px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    font-weight: bolder;
+    display: none;
+    /* text-indent: -9999px; */
+    background: transparent;
+    color: #ff6e40;
+    border: 2px solid transparent;
+
+}
+
+.scrollup:hover {
+    border-color: #ff6e40;
+    background: #ff6e40;
+    color: #ffffff;
+}
 
 /******MEDIA QUERIES*********/
 
-@media screen and (max-width:480px){
+@media screen and (max-width: 480px) {
     /* styles for mobile browsers smaller than 480px; (iPhone) */
 }
-@media screen and (max-width:767px){
+
+@media screen and (max-width: 767px) {
+    .slick-carousel {
+        height: auto;
+    }
+
+    .item-servise {
+        height: auto;
+    }
+
+    .block-text-wrapper {
+        margin-top: 20px;
+        text-align: center;
+
+    }
+
+    .block-icon, .block-text-wrapper > .subtitle {
+        display: flex;
+        justify-content: center;
+    }
+
     /* default iPad screens */
 }
+
 /* different techniques for iPad screening */
-@media screen and  (max-width: 1024px){
+@media screen and  (max-width: 1024px) {
     /* For portrait layouts only */
 }
