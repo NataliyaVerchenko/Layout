@@ -1,9 +1,17 @@
 $(document).ready(function () {
+    $('.toogle').click(function () {
+        $('.toogle-menu').toggleClass('menu-opened');
+
+    });
+   /* $('.toogle').click(function (){
+        $('#toogleMenu').toggleClass('menu-opened');
+    });*/
+
 
     $('.slick-carousel').slick({
         arrows: false,
         autoPlay: true,
-        autoplaySpeed: 3000
+        autoplaySpeed: 1000
     });
 
     $(window).scroll(function () {
@@ -19,7 +27,7 @@ $(document).ready(function () {
         }, 600);
         return false;
     });
-    $('.menu a').on('click',function(){
+    $('.desktop-menu a').on('click',function(){
         var elementClick = $(this).attr("href"),
             destination = $(elementClick).offset().top - 70;
 
@@ -34,6 +42,8 @@ function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 49.9954639, lng: 36.3390399},
         zoom: 10,
+        zoomControl: false,
+        scaleControl: true,
         styles: [
             {
                 "featureType": "all",

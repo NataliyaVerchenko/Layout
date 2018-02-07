@@ -122,6 +122,11 @@ main {
     font-weight: 400;
 }
 
+.block {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .clearfix:after {
     visibility: hidden;
     display: block;
@@ -130,7 +135,6 @@ main {
     clear: both;
     height: 0;
 }
-
 
 .container {
     max-width: 1174px;
@@ -172,14 +176,13 @@ section .subtitle {
 /******MAIN*********/
 
 /******HEADER*********/
-.header-fixed{
+.header-fixed {
     position: fixed;
     right: 0;
     left: 0;
     z-index: 1030;
     background: #fff;
 }
-
 
 /*Carousel*/
 
@@ -249,11 +252,11 @@ a.btn-cta {
 
 /*nav*/
 header {
-  /*  position: relative;*/
+    /*  position: relative;*/
     padding: 35px 0;
 }
 
-.wrapper-nav {
+.nav-wrapper {
     position: absolute;
     top: 0;
     left: 0;
@@ -280,13 +283,13 @@ a.logo {
     text-decoration: none;
 }
 
-.menu {
+.desktop-menu {
     display: flex;
     margin: 0;
     padding: 0;
 }
 
-.menu li {
+.desktop-menu li {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -295,7 +298,7 @@ a.logo {
     padding: 5px 10px;
 }
 
-.menu li a {
+.desktop-menu li a {
     display: block;
     text-decoration: none;
     text-transform: uppercase;
@@ -306,8 +309,79 @@ a.logo {
     color: #616161;
 }
 
-.menu li:last-child {
+.desktop-menu li:last-child {
     padding-right: 0;
+}
+
+/*MENU COLLAPS*/
+
+.toogle {
+    display: none;
+}
+
+button.navbar-toggle {
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 9px 10px;
+    border-radius: 3px;
+    background: #74787c99;
+}
+
+.icon-bar {
+    display: block;
+    background-color: #ffffff;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 4px;
+}
+
+.toogle-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    /* background: currentColor;*/
+    margin: 0;
+    padding: 0;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(126, 131, 136, 0.85);
+}
+
+.menu-opened {
+    display: block;
+}
+
+.mobile-menu {
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.mobile-menu .mobile-menu__item a {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 0 0 5px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu .mobile-menu__item:hover a {
+    background: rgba(78, 85, 91, 0.82);
 }
 
 /*SECTION ABOUT*/
@@ -361,12 +435,12 @@ a.btn-read:hover {
     margin-top: -20px;
 }
 
-.block-icon {
+.section-icon {
     margin: 0;
     padding: 0;
 }
 
-.icon {
+.icon-service {
     display: block;
     width: 80px;
     height: 80px;
@@ -375,7 +449,7 @@ a.btn-read:hover {
     margin-right: 9px;
 }
 
-.item-servise {
+.item-service {
     align-items: center;
     height: 100px;
     overflow: hidden;
@@ -391,6 +465,42 @@ a.btn-read:hover {
     margin-top: 0;
     font-size: 19px;
     margin-bottom: 19px;
+}
+
+.bg-icon6 {
+    width: 80px;
+    height: 80px;
+    background: url('../images/css_sprites.png') -10px -10px;
+}
+
+.bg-icon5 {
+    width: 80px;
+    height: 80px;
+    background: url('../images/css_sprites.png') -110px -10px;
+}
+
+.bg-icon3 {
+    width: 80px;
+    height: 80px;
+    background: url('../images/css_sprites.png') -10px -110px;
+}
+
+.bg-icon2 {
+    width: 80px;
+    height: 80px;
+    background: url('../images/css_sprites.png') -110px -110px;
+}
+
+.bg-icon4 {
+    width: 80px;
+    height: 80px;
+    background: url('../images/css_sprites.png') -210px -10px;
+}
+
+.bg-icon1 {
+    width: 80px;
+    height: 80px;
+    background: url('../images/css_sprites.png') -210px -110px;
 }
 
 /*SECTION CALL-ACTIONS*/
@@ -422,31 +532,91 @@ a.btn-subscribe {
 
 /*SECTION WORKS*/
 .portfolio-item {
-    width: 380px;
-    height: 380px;
+    position: relative;
     margin-bottom: 20px;
+}
+
+.portfolio-item .img {
+    width: 100%;
+    height: 380px;
+}
+
+.portfolio-item .img:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0);
+}
+
+.portfolio-item a:hover img:before {
+    background: rgba(213, 213, 213, 0.45);
+}
+
+.portfolio-item .icon {
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+}
+
+.portfolio-item:hover .icon {
+    opacity: 1;
+}
+
+.portfolio-item .info {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    text-align: center;
+    backface-visibility: hidden;
+}
+
+.portfolio-item:hover .info {
+    transition: .5s ease-in-out;
+    background: rgba(176, 176, 176, 0.44);
+}
+
+.portfolio-item .text-bottom {
+    color: white;
+    font-size: 1.3em;
+    position: absolute;
+    height: auto;
+    bottom: -16px;
+    padding: 19px;
+    left: 0;
+    opacity: 0;
+    right: 0;
+    background: rgba(78, 85, 91, 0.72);
+
+}
+
+.portfolio-item:hover .text-bottom {
+    opacity: 1;
+    transition: .5s ease-in-out;
 }
 
 .item6 {
     background: url("../images/block-memo05-akihiro-yoshida.png") no-repeat center;
-
 }
-
 .item2 {
     background: url("../images/dandelion01-akihiro-yoshida-copy.png") no-repeat center;
-
 }
-
 .item4 {
     background: url("../images/flame03-akihiro-yoshida.png") no-repeat center;
-
 }
-
 .item3 {
     background: url("../images/chair-by-masamune-kaji-on-behance.png") no-repeat center;
-
 }
-
 .item5 {
     background: url("../images/slice.jpg") no-repeat center;
     background-size: cover;
@@ -474,12 +644,12 @@ a.btn-subscribe {
     margin: 0;
 }
 
-.contact .block-icon {
+.contact .section-icon {
     background: #ff6e40;
     border-radius: 50%;
 }
 
-.contact .block-icon a {
+.contact .section-icon a {
     display: block;
     margin: 20px;
     height: auto;
@@ -487,12 +657,12 @@ a.btn-subscribe {
 
 }
 
-.contact .block-icon a span {
+.contact .section-icon a span {
     font-size: 30px;
     display: inline-block;
 }
 
-.contact .block-text {
+.contact .section-info {
     margin-left: 10px;
 }
 
@@ -543,8 +713,9 @@ a.btn-subscribe {
     position: fixed;
     z-index: 99999;
     right: 20px;
-    bottom: 2%;/*
-    padding: 5px;*/
+    bottom: 2%;
+    /*
+        padding: 5px;*/
     font-size: 23px;
     text-align: center;
     text-decoration: none;
@@ -568,8 +739,34 @@ a.btn-subscribe {
 
 /******MEDIA QUERIES*********/
 
-@media screen and (max-width: 480px) {
-    /* styles for mobile browsers smaller than 480px; (iPhone) */
+@media screen and  (max-width: 1024px) {
+    .container {
+        max-width: 959px;
+        margin: 0 auto;
+    }
+
+    /* For portrait layouts only */
+}
+
+/* different techniques for iPad screening */
+@media screen and  (max-width: 960px) {
+    .carusel-item__content {
+        height: 100%;
+        padding: 5em 0;
+    }
+
+    .slick-carousel h2.title {
+        font-size: 20px;
+        margin-bottom: 5px;
+
+    }
+
+    p.header-subtitle {
+        font-size: 14px;
+
+    }
+
+    /* For portrait layouts only */
 }
 
 @media screen and (max-width: 767px) {
@@ -577,7 +774,7 @@ a.btn-subscribe {
         height: auto;
     }
 
-    .item-servise {
+    .item-service {
         height: auto;
     }
 
@@ -587,15 +784,96 @@ a.btn-subscribe {
 
     }
 
-    .block-icon, .block-text-wrapper > .subtitle {
+    .section-icon, .block-text-wrapper > .subtitle {
         display: flex;
         justify-content: center;
     }
 
-    /* default iPad screens */
+    .desktop-menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .toogle {
+        display: block;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        height: 480px;
+    }
+
+    .slick-carousel h2.title {
+        font-size: 20px;
+        margin-bottom: 5px;
+
+    }
+
+    p.header-subtitle {
+        font-size: 14px;
+
+    }
+
+    a.btn-cta {
+        border: 1px solid #ff6e40;
+        margin-top: 15px;
+        font-size: 12px;
+        padding: 6px 22px;
+
+    }
+
+    section .title {
+        font-size: 1.2em;
+    }
+
+    section .subtitle {
+        margin-top: -29px;
+        font-size: .8em;
+    }
+
+    section .description {
+        padding: 10px 30px;
+        font-size: .8em;
+    }
+
+    a.btn-subscribe {
+        width: 153px;
+        margin: 0 auto;
+        display: inherit;
+    }
+
+    .call-actions span {
+        font-size: .9em;
+    }
+
+    a.btn-subscribe {
+        font-size: .7em;
+    }
+
 }
 
-/* different techniques for iPad screening */
-@media screen and  (max-width: 1024px) {
-    /* For portrait layouts only */
+@media screen and (max-width: 480px) {
+    .carusel-item__content {
+        height: 100%;
+        padding: 5em 0;
+    }
+
+    .slick-carousel h2.title {
+        font-size: 20px;
+        margin-bottom: 5px;
+
+    }
+
+    p.header-subtitle {
+        font-size: 14px;
+
+    }
+
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+
 }
