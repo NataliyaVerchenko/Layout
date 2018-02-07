@@ -535,7 +535,9 @@ a.btn-subscribe {
     position: relative;
     margin-bottom: 20px;
 }
-
+.portfolio-item a{
+    text-decoration: none;
+}
 .portfolio-item .img {
     width: 100%;
     height: 380px;
@@ -560,6 +562,9 @@ a.btn-subscribe {
     font-size: 1.5em;
     position: absolute;
     top: 50%;
+    border-radius: 50%;
+    padding: 20px;
+    background: #ff7754;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -587,16 +592,17 @@ a.btn-subscribe {
 }
 
 .portfolio-item .text-bottom {
-    color: white;
-    font-size: 1.3em;
+    color: #ff6e40;
+    text-decoration: none;
+    font-size: 1em;
     position: absolute;
     height: auto;
-    bottom: -16px;
-    padding: 19px;
+    bottom: 0;
+    padding: 10px;
     left: 0;
     opacity: 0;
     right: 0;
-    background: rgba(78, 85, 91, 0.72);
+    background: rgb(242, 241, 240);
 
 }
 
@@ -604,7 +610,21 @@ a.btn-subscribe {
     opacity: 1;
     transition: .5s ease-in-out;
 }
+.text-bottom{
+    text-decoration: none;
 
+}
+.text-bottom p{
+    color: #ff6e40;
+    text-transform: uppercase;
+}
+.text-bottom .category{
+    text-decoration: none;
+    color: #616161;
+    font-size: 1.2em;
+    display: inline-block;
+
+}
 .item6 {
     background: url("../images/block-memo05-akihiro-yoshida.png") no-repeat center;
 }
