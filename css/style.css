@@ -11,6 +11,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 * {margin: 0;padding: 0;}
 
 *:after, :before {box-sizing: border-box;}
+html{
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
 
 h1, h2, h3, h4 {text-align: center;margin-bottom: 20px;}
 
@@ -21,7 +28,7 @@ main {color: #616161;font-family: "Open Sans", sans-serif;font-size: 16px;font-w
 
 .block {margin-top: 20px;margin-bottom: 20px;}
 
-.container {max-width: 1174px;margin: 0 auto;}
+.container {max-width: 1174px;margin: 0 auto;width: 100%;}
 
 section {padding-top: 65px;padding-bottom: 100px;}
 
@@ -29,7 +36,7 @@ section.button {text-transform: uppercase;color: #ffffff;font-family: Montserrat
 
 section .title {color: #212121;font-family: Montserrat, sans-serif;font-size: 30px;font-weight: 400;text-transform: uppercase;}
 
-section .subtitle {text-align: center;margin-top: 30px;color: #bdbdbd;font-family: Montserrat, sans-serif;font-weight: 600;text-transform: uppercase;}
+section .subtitle {text-align: center;color: #bdbdbd;font-family: Montserrat, sans-serif;font-weight: 600;text-transform: uppercase;}
 
 /******MAIN*********/
 
@@ -105,15 +112,19 @@ a.btn-read:hover {background: #1b1e21;color: white;}
 .services {background: #f5f5f5;}
 
 .services h3 {text-align: left;color: #212121;font-family: Montserrat, sans-serif;font-size: 20px;font-weight: 400;text-transform: uppercase;margin-bottom: 10px;}
-.services .description {word-break: break-all;margin-top: -20px;}
+.services .description {}
 
 .icon-service {display: block;background: url("../images/css_sprites.png") no-repeat center;margin-left: 2px;}
 
-.item-service {align-items: center;height: 100px;overflow: hidden;margin-bottom: 20px;}
+.item-service {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+}
 
-.block-text-wrapper {margin-top: 90px;padding-left: 5px;}
+.item-service .block-text-wrapper {padding:0 10px;display: flex;flex-direction: column;}
 
-.block-text-wrapper > .subtitle {margin-top: 0;font-size: 19px;margin-bottom: 19px;}
+.block-text-wrapper > .subtitle {margin-top: 0;font-size: 19px;}
 
 .bg-icon6 {width: 80px;height: 80px;background: url('../images/css_sprites.png') -10px -10px;}
 
@@ -134,7 +145,7 @@ a.btn-read:hover {background: #1b1e21;color: white;}
 
 .call-actions p {color: #bdbdbd;font-family: "Open Sans", sans-serif;font-size: 16px;font-weight: 400;line-height: 20px;}
 
-a.btn-subscribe {margin-top: 0;background: #ff6e40;}
+a.btn-subscribe {margin-top: 0;background: #ff6e40;padding: 9px 10px;}
 
 /*SECTION WORKS*/
 .portfolio-item {position: relative;margin-bottom: 20px;}
@@ -168,10 +179,11 @@ a.btn-subscribe {margin-top: 0;background: #ff6e40;}
 
 /*SECTION CONTACT*/
 .contact {background: #f5f5f5;padding-top: 50px;padding-bottom: 50px;}
+.contact .contact-items{justify-content: center;margin: 0;padding:  70px 0;}
+.contact  .contact-items  .contact-items__link{display: flex;align-items: center; margin-bottom: 10px;}
+.contact .section-icon {display: flex;align-items: center;}
 
-.contact .section-icon {background: #ff6e40;border-radius: 50%;}
-
-.contact .section-icon a {display: block;margin: 20px;height: auto;color: white;}
+.contact .section-icon a {display: block;background: #ff6e40;border-radius: 50%;height: auto;color: white;padding: 22px;}
 
 .contact .section-icon a span {font-size: 30px;display: inline-block;}
 
@@ -216,7 +228,7 @@ a.btn-subscribe {margin-top: 0;background: #ff6e40;}
 }
 @media screen and (max-width: 767px) {
     .slick-carousel {height: auto;}
-    .item-service {height: auto;}
+    .item-service {height: auto;display: block;}
     .block-text-wrapper {margin-top: 20px;text-align: center;}
     .section-icon, .block-text-wrapper > .subtitle {display: flex;justify-content: center;}
     .desktop-menu {display: none;}
@@ -227,11 +239,12 @@ a.btn-subscribe {margin-top: 0;background: #ff6e40;}
     p.header-subtitle {font-size: 14px;}
     a.btn-cta {border: 1px solid #ff6e40;margin-top: 15px;font-size: 12px;padding: 6px 22px;}
     section .title {font-size: 1.2em;}
-    section .subtitle {margin-top: -29px;font-size: .8em;}
+    section .subtitle {font-size: .8em;}
     section .description {padding: 10px 30px;font-size: .8em;}
-    a.btn-subscribe {width: 153px;margin: 0 auto;display: inherit;}
-    .call-actions span {font-size: .9em;}
-    a.btn-subscribe {font-size: .7em;}
+    a.btn-subscribe {width: 153px;margin: 0 auto;display: inherit;font-size: .7em;}
+    .call-actions span {font-size: .9em;text-align: center;display: inline-block;margin-bottom: 20px;}
+    .call-actions p {text-align: center;}
+   
 }
 
 @media screen and (max-width: 480px) {
