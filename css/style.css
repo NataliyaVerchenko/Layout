@@ -195,6 +195,8 @@ a.btn-subscribe {margin-top: 0;background: #ff6e40;padding: 9px 10px;}
     width: 67px;
     color: white;}
 
+    .contact .section-icon p {margin-bottom: 0;}
+
 .contact .section-icon a span {font-size: 30px;display: inline-block;}
 
 .contact .section-info {margin-left: 10px;}
