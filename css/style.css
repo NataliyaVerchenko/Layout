@@ -183,7 +183,14 @@ a.btn-subscribe {margin-top: 0;background: #ff6e40;padding: 9px 10px;}
 .contact  .contact-items  .contact-items__link{display: flex;align-items: center; margin-bottom: 10px;}
 .contact .section-icon {display: flex;align-items: center;}
 
-.contact .section-icon a {display: block;background: #ff6e40;border-radius: 50%;height: auto;color: white;padding: 22px;}
+.contact .section-icon a {display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff6e40;
+    border-radius: 50%;
+    height: 67px;
+    width: 67px;
+    color: white;}
 
 .contact .section-icon a span {font-size: 30px;display: inline-block;}
 
