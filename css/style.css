@@ -199,7 +199,7 @@ a.btn-subscribe {margin-top: 0;background: #ff6e40;padding: 9px 10px;}
 
 .contact .section-info {margin-left: 10px;}
 
-.contact .address {
+.contact-items__link .address {
     display: flex;
     flex-direction: column;
 }
