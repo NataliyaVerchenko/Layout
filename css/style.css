@@ -261,15 +261,9 @@ a.btn-subscribe {margin-top: 0;background: #ff6e40;padding: 9px 10px;}
     a.btn-subscribe {width: 153px;margin: 0 auto;display: inherit;font-size: .7em;}
     .call-actions span {font-size: .9em;text-align: center;display: inline-block;margin-bottom: 20px;}
     .call-actions p {text-align: center;}
-    .contact .section-icon a {
-        height: 37px;
-        width: 37px;
-        }
-        .contact .section-icon a span {
-            font-size: .7rem;
-            display: inline-block;
-        }
-        .contact .section-icon p { font-size: .7rem;}
+    .contact .section-icon a { height: 37px; width: 37px;}
+    .contact .section-icon a span { font-size: 1.2rem;}
+    .contact .section-icon p { font-size: .7rem;}
    
 }
 
